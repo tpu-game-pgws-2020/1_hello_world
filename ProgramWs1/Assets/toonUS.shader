@@ -68,7 +68,7 @@
 					half NL = dot(N, L) * 0.5 + 0.5;
 
 					float4 col;
-					col.agb = albedo.rgb * _LightColor0.rgb * tex2D(_RampTex, fixed2(NL, 1.0)).rgb;
+					col.rgb = albedo.rgb * _LightColor0.rgb * tex2D(_RampTex, fixed2(NL, 1.0)).rgb;
 					col.a = 0;
 					UNITY_APPLY_FOG(i.fogCoord, col);
 					return col;
